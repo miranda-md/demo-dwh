@@ -1,0 +1,9 @@
+CREATE SCHEMA IF NOT EXISTS sa_coffee_shop_card_sales;
+
+CREATE SCHEMA IF NOT EXISTS sa_coffee_shop_cash_sales;
+
+CREATE SCHEMA IF NOT EXISTS bl_3nf;
+
+CREATE SCHEMA IF NOT EXISTS bl_dm;
+
+CREATE SCHEMA IF NOT EXISTS bl_cl;

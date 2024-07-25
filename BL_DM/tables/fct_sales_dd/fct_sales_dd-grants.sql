@@ -1,0 +1,1 @@
+GRANT SELECT ON TABLE bl_dm.bl_dm_fct_sales_dd TO bl_cl_user;

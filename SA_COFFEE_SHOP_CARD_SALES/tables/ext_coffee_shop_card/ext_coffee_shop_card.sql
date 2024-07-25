@@ -1,0 +1,50 @@
+CREATE EXTENSION IF NOT EXISTS file_fdw;
+
+CREATE SERVER IF NOT EXISTS csv_log FOREIGN DATA WRAPPER file_fdw;
+
+
+CREATE FOREIGN TABLE IF NOT EXISTS sa_coffee_shop_card_sales.ext_coffee_shop_card (
+	row_id VARCHAR(255),
+	transaction_id VARCHAR(255),
+	transaction_date VARCHAR(255),
+	transaction_time VARCHAR(255),
+	quantity_sold VARCHAR(255),
+	discount_amount VARCHAR(255),
+	sales VARCHAR(255),
+	payment_id VARCHAR(255),
+	payment_method VARCHAR(255),
+	bank_id VARCHAR(255),
+	bank_title VARCHAR(255),
+	product_price VARCHAR(255),
+	product_size VARCHAR(255),
+	product_id VARCHAR(255),
+	product_title VARCHAR(255),
+	product_category VARCHAR(255),
+	product_description VARCHAR(255),
+	store_id VARCHAR(255),
+	store_description VARCHAR(255),
+	store_city VARCHAR(255),
+	store_address VARCHAR(255),
+	store_manager_id VARCHAR(255),
+	store_manager_first_name VARCHAR(255),
+	store_manager_last_name VARCHAR(255),
+	store_manager_passport_id VARCHAR(255),
+	store_manager_city VARCHAR(255),
+	store_manager_address VARCHAR(255),
+	store_manager_phone_number VARCHAR(255),
+	employee_id VARCHAR(255),
+	employee_first_name VARCHAR(255),
+	employee_last_name VARCHAR(255),
+	employee_passport_id VARCHAR(255),
+	employee_position VARCHAR(255),
+	employee_city VARCHAR(255),
+	employee_address VARCHAR(255),
+	employee_phone_number VARCHAR(255),
+	customer_id VARCHAR(255),
+	customer_first_name VARCHAR(255),
+	customer_last_name VARCHAR(255),
+	customer_email VARCHAR(255),
+	customer_phone_namber VARCHAR(255)
+) SERVER csv_log 
+  OPTIONS (filename '/home/COFFEE_SHOP_CARD_SALES.CSV', 
+                   delimiter ';', format 'csv', header 'true');

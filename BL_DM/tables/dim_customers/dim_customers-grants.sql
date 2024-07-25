@@ -1,0 +1,1 @@
+GRANT SELECT ON TABLE bl_dm.bl_dm_dim_customers TO bl_cl_user;
